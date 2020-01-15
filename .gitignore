@@ -1,0 +1,9 @@
+# IDE and etc
+.idea
+
+# helpers
+phpcs.phar
+phpcbf.phar
+psysh
+
+/vendor

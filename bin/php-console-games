@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+PhpConsoleGames\Engine\run();
+
+
+
+
+
+
+
+
+
+
+
+// use function Php\ConsoleGames\isHappy;
+
+// // Happy ticket
+// echo 'Input number of happy ticket: ';
+
+// $input = trim(fgets(STDIN, 1024));
+
+// $result = isHappy($input);
+// if ($result) {
+// 	echo "\n Congratulations! It is a happy ticket! \n";
+// } else {
+// 	echo "\n I'm sorry, your ticket is not happy! \n";
+// }
