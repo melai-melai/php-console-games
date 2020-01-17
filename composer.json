@@ -30,7 +30,8 @@
             "PhpConsoleGames\\": "src"
         },
         "files": [
-            "src/Engine.php"
+            "src/Engine.php",
+            "src/Games/HappyTicketGame.php"
         ]
     }
 }
