@@ -2,6 +2,21 @@
 
 namespace PhpConsoleGames\Games\HappyTicketGame;
 
+function runTicketGame()
+{
+	$ticketNumber = implode("", getNumberOfTicket());
+
+	$messages = [
+		"correctly" => "Congratulations! Your ticket {$ticketNumber} is happy! \n",
+		"wrong" => "Your ticket {$ticketNumber} is not happy! =( \n"
+	];
+
+	$answer = isHappy($ticketNumber);
+	$question = "It is number of a happy ticket? Number: {$ticketNumber} \n";
+
+	return [$question, $answer, $messages];
+}
+
 function isHappy(string $number)
 {
     $length = mb_strlen($number);

@@ -2,6 +2,22 @@
 
 namespace PhpConsoleGames\Games\ParityGame;
 
+function runParityGame()
+{
+	$numberArray = getArrayNumbers();
+	$numberStr = implode(", ", $numberArray);
+	
+	$messages = [
+		"correctly" => "Congratulations! [{$numberStr}] is with the same parity! \n",
+		"wrong" => "[{$numberStr}] is not with the same parity! =( \n"
+	];
+
+	$answer = isSameParity($numberArray);
+	$question = "All numbers are the same parity? Array: {$numberStr} \n";
+
+	return [$question, $answer, $messages];
+}
+
 function isSameParity(array $numbers)
 {
     if (empty($numbers)) {
