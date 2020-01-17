@@ -16,3 +16,15 @@ function isHappy(string $number)
 
     return $balance === 0;
 }
+
+function getNumberOfTicket()
+{
+	$length = 6;
+	$number = [];
+
+	for ($i = 0; $i < $length; $i += 1) {
+		$number[] = random_int(0, 9);
+	}
+
+	return $number;
+}

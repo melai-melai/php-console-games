@@ -6,6 +6,9 @@ use function cli\line;
 use function cli\prompt;
 
 use function PhpConsoleGames\Games\HappyTicketGame\isHappy;
+use function PhpConsoleGames\Games\HappyTicketGame\getNumberOfTicket;
+use function PhpConsoleGames\Games\ParityGame\isSameParity;
+use function PhpConsoleGames\Games\ParityGame\getArrayNumbers;
 
 function run()
 {
@@ -27,8 +30,9 @@ function run()
 
 	switch ($game) {
 		case "1":
-			line("Here will be 'Happy ticket game' \n");
-			$ticket = prompt("Enter your ticket number: \n", false, "Your answer: ");
+			$number = getNumberOfTicket();
+			line("It is number of a happy ticket? Number: %s \n", implode("", $number));
+			$answerUser = prompt("It is a happy ticket? \n", false, "Your answer: ");
 			$answer = isHappy($ticket);
 			if ($answer) {
 				line("Congratulations! Your ticket %s is happy!' \n", $ticket);
@@ -37,7 +41,17 @@ function run()
 			}
 			break;
 		case "2":
-			line("Here will be 'Parity Game' \n");
+			line("Here will be 'Parity Game \n");
+			$array = getArrayNumbers();
+			line("Look at this: %s \n", implode(", ", $array));
+			$answerUser = prompt("All numbers are the same parity? \n", false, "Your answer [true|false]: ");
+			$answer = isSameParity($array);
+
+			if($answer == $answerUser) {
+				line("Congratulations! \n");
+			} else {
+				line("Your answer is wrong! \n");
+			}
 			break;
 		default:
 			line("No, I don't have the game with number %s. \n", $game);

@@ -31,7 +31,8 @@
         },
         "files": [
             "src/Engine.php",
-            "src/Games/HappyTicketGame.php"
+            "src/Games/HappyTicketGame.php",
+            "src/Games/ParityGame.php"
         ]
     }
 }
