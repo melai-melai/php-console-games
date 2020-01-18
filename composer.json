@@ -15,7 +15,9 @@
     ],
     "scripts": {
         "phpcs": "./vendor/bin/phpcs",
-        "phpcbf": "./vendor/bin/phpcbf"
+        "phpcbf": "./vendor/bin/phpcbf",
+        "phpunit": "./vendor/bin/phpunit",
+        "test": "./vendor/bin/phpunit tests"
     },
     "require": {
         "tightenco/collect": "^6.11",

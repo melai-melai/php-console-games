@@ -10,4 +10,7 @@ lint:
 lint-fix:
 	composer run-script phpcbf -- --standard=PSR12 src #tests
 
+test:
+	composer run-script phpunit tests
+
 .PHONY: test log
