@@ -8,7 +8,7 @@ use PhpConsoleGames\Games\ParityGame;
 class ParityGameTest extends TestCase
 {
 	/**
-	 * Test check on the same parity
+	 * Test checks for the same parity
 	 */
 	public function testIsSameParity()
 	{
@@ -20,7 +20,7 @@ class ParityGameTest extends TestCase
 	}
 
 	/**
-	 * Test check number is even
+	 * Test checks the number is even
 	 */
 	public function testIsEvenNumber()
 	{

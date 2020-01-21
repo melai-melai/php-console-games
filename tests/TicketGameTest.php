@@ -8,7 +8,7 @@ use PhpConsoleGames\Games\HappyTicketGame;
 class TicketGameTest extends TestCase
 {
 	/**
-	 * Test check on happy number
+	 * Test checks for a happy number
 	 */
 	public function testIsHappy()
 	{
@@ -17,7 +17,7 @@ class TicketGameTest extends TestCase
 	}
 
 	/**
-	 * Test check get number of ticket
+	 * Test checks ticket number generation
 	 */
 	public function testGetNumberOfTicket()
 	{
