@@ -1,6 +1,7 @@
 {
     "name": "melai-melai/php-console-games",
     "description": "Some games in console",
+    "keywords": ["php", "console", "console game"],
     "license": "MIT",
     "type": "project",
     "authors": [
@@ -10,14 +11,13 @@
         }
     ],
     "bin": [
-        "bin/php-console-games",
-        "bin/game-happy-ticket"
+        "bin/php-console-games"
     ],
     "scripts": {
-        "phpcs": "./vendor/bin/phpcs",
-        "phpcbf": "./vendor/bin/phpcbf",
-        "phpunit": "./vendor/bin/phpunit",
-        "test": "./vendor/bin/phpunit tests"
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpunit": "phpunit",
+        "test": "phpunit tests"
     },
     "require": {
         "tightenco/collect": "^6.11",
