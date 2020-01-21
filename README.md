@@ -26,4 +26,4 @@ Use https://psysh.org/
 
 ### Test Coverage
 
-...
+* see `phpunit.xml`
