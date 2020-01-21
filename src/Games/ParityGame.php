@@ -3,7 +3,7 @@
 namespace PhpConsoleGames\Games\ParityGame;
 
 /**
- * Main function of game
+ * The main function of the game
  *
  * @return array Array contains question, right answer and messages (win and fail) for input in console
  */
@@ -13,20 +13,20 @@ function runParityGame()
     $numberStr = implode(", ", $numberArray);
     
     $messages = [
-        "correctly" => "Congratulations! [{$numberStr}] is with the same parity! \n",
-        "wrong" => "[{$numberStr}] is not with the same parity! =( \n"
+        "correctly" => "Congratulations! Well done!\n",
+        "wrong" => "You are wrong! =( \n"
     ];
 
     $answer = isSameParity($numberArray);
-    $question = "All numbers are the same parity? Array: {$numberStr} \n";
+    $question = "\nDo all these numbers have the same parity? Array: {$numberStr} \n";
 
     return [$question, $answer, $messages];
 }
 
 /**
- * Check all number in array have the same parity
+ * Checks that all numbers in the array have the same parity
  *
- * @param  array   $numbers Array with numbers
+ * @param  array   $numbers Array of numbers
  * @return boolean          Answer
  */
 function isSameParity(array $numbers)
@@ -47,7 +47,7 @@ function isSameParity(array $numbers)
 }
 
 /**
- * Check number is even
+ * Checks if the number is even
  *
  * @param  int     $num Number
  * @return boolean      Answer
@@ -58,7 +58,7 @@ function isEvenNumber(int $num)
 }
 
 /**
- * Generation of array with numbers
+ * Generating an array with numbers
  *
  * @return array Array with numbers
  */

@@ -3,7 +3,7 @@
 namespace PhpConsoleGames\Games\HappyTicketGame;
 
 /**
- * Main function of game
+ * The main function of the game
  *
  * @return array Array contains question, right answer and messages (win and fail) for input in console
  */
@@ -12,18 +12,18 @@ function runTicketGame()
     $ticketNumber = implode("", getNumberOfTicket());
 
     $messages = [
-        "correctly" => "Congratulations! Your ticket {$ticketNumber} is happy! \n",
-        "wrong" => "Your ticket {$ticketNumber} is not happy! =( \n"
+        "correctly" => "Congratulations! You are right!\n",
+        "wrong" => "You are wrong! =( \n"
     ];
 
     $answer = isHappy($ticketNumber);
-    $question = "It is number of a happy ticket? Number: {$ticketNumber} \n";
+    $question = "\nIt is a happy ticket number? Number: {$ticketNumber} \n";
 
     return [$question, $answer, $messages];
 }
 
 /**
- * Check number on happy (sum of first three numbers equals sum of last three numbers)
+ * Checks a number for a happy number (the sum of the first three numbers is equal to the sum of the last three numbers)
  *
  * @param  string  $number Number of ticket
  * @return boolean         Answer
@@ -44,7 +44,7 @@ function isHappy(string $number)
 }
 
 /**
- * Generation of number
+ * Number generation
  *
  * @return array Number of ticket
  */

@@ -8,6 +8,9 @@ use function cli\choose;
 use function PhpConsoleGames\Games\HappyTicketGame\runTicketGame;
 use function PhpConsoleGames\Games\ParityGame\runParityGame;
 
+/**
+ * Main scenario
+ */
 function run()
 {
     line("Hello, my friend! \n");
@@ -26,20 +29,25 @@ function run()
     line("I have two games for you, %s! \n", $name);
     line("[1] - Happy ticket game \n");
     line("[2] - Parity \n");
-    $game = prompt("What game do you want to play? \n", false, "Your answer [1|2]: ");
+    $game = choose("What game do you want to play? \n", $choices = '12', $default = '1');
 
     handleGame($game);
 
-    $answer = choose("Do you want to exit or repeat again? \n [1] - exit, [2] - repeat \n", $choices = 'yn', $default = 'n');
-    if ($answer === 'n') {
+    $answer = choose("Do you want to repeat? \n", $choices = 'yn', $default = 'n');
+    if ($answer === "n") {
         line("See you, my friend! \n");
         exit;
-    } else {
-        run();
     }
+
+    run();
 }
 
-function handleGame($gameNumber)
+/**
+ * Game handler
+ *
+ * @param  string $gameNumber Game number (from list og games)
+ */
+function handleGame(string $gameNumber)
 {
     $gamesMapping = [
         "1" => function () {
@@ -56,7 +64,7 @@ function handleGame($gameNumber)
 
             $userAnswer = choose($question, $choices = 'yn', $default = 'n');
 
-            if ($answer == $userAnswer) {
+            if (($answer && ($userAnswer === "y")) || (!$answer && ($userAnswer === "n"))) {
                 line($messages["correctly"]);
             } else {
                 line($messages["wrong"]);
