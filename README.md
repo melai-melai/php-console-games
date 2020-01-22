@@ -1,6 +1,9 @@
 # php-console-games
 
 ## Description
+This package contains two console minigames: 
+1. Happy ticket
+2. Parity
 
 ### Addons
 
@@ -10,14 +13,14 @@ Use https://psysh.org/
 
 1. Clone repository
 2. Execute the command
-    make install
+    `make install`
 
-### Install package
+### Install package and usage
 
 1. ...
 2. You need to properly set the $PATH environment variable
 3. Execute the command
-    php-console-games
+    `php-console-games`
 
 ### Run tests
 
