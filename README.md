@@ -1,5 +1,8 @@
 # php-console-games
 
+[![Build Status](https://travis-ci.com/melai-melai/php-console-games.svg?branch=master)](https://travis-ci.com/melai-melai/php-console-games)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a8c56f3276ceb3637a14/maintainability)](https://codeclimate.com/github/melai-melai/php-console-games/maintainability)
+
 ## Description
 This package contains two console minigames: 
 1. Happy ticket

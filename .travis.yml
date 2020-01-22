@@ -1,4 +1,9 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=293444d8ec6d578c2241ab0528efa6053f4ddf8d88520789ae9ccb8579d329f3
+
 language: php
+
 php:
   - '7.2'
 
