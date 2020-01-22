@@ -1,6 +1,7 @@
 env:
   global:
-    - CC_TEST_REPORTER_ID=293444d8ec6d578c2241ab0528efa6053f4ddf8d88520789ae9ccb8579d329f3
+    - CC_TEST_REPORTER_ID=7a9ca99479ba8d417428a043610e281cf38902d3304da80ed1f058cb068c1ec4
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 
 language: php
 
@@ -17,7 +18,9 @@ before_script:
 
 script: 
   - make lint test
-  - make test-coverage
+  - "phpunit --testsuite=unit --coverage-text --coverage-clover build/logs/clover.xml"
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build -t clover --exit-code $TRAVIS_TEST_RESULT; fi
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  
