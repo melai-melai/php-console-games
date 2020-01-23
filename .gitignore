@@ -2,8 +2,6 @@
 .idea
 
 # helpers
-phpcs.phar
-phpcbf.phar
 psysh
 
 /vendor

@@ -21,7 +21,7 @@ Use https://psysh.org/
 
 ### Install package and usage
 
-1. ...
+1. `composer global require melai-melai/php-console-games`
 2. You need to properly set the $PATH environment variable
 3. Execute the command
     `php-console-games`
@@ -29,8 +29,9 @@ Use https://psysh.org/
 ### Run tests
 
 1. Execute the command
-    make test
+    `make test`
 
 ### Test Coverage
 
 * see `phpunit.xml`
+* see `.travis.yml`
