@@ -30,4 +30,22 @@ class ParityGameTest extends TestCase
 		$this->assertFalse(ParityGame\isEvenNumber(7));
 		$this->assertFalse(ParityGame\isEvenNumber(21));
 	}
+
+	/**
+	 * Test checks generation an array with numbers
+	 */
+	public function testGetArrayNumbers()
+	{
+		$this->assertIsArray(ParityGame\getArrayNumbers());
+		$this->assertFalse(empty(ParityGame\getArrayNumbers()));
+	}
+
+	/**
+	 * Test run the game
+	 */
+	public function testRunParityGame()
+	{
+		$this->assertIsArray(ParityGame\runParityGame());
+		$this->assertCount(3, ParityGame\runParityGame());
+	}
 }

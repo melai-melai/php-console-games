@@ -58,7 +58,7 @@ function isEvenNumber(int $num)
 }
 
 /**
- * Generating an array with numbers
+ * Generation an array with numbers
  *
  * @return array Array with numbers
  */
