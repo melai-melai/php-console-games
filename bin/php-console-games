@@ -2,6 +2,13 @@
 
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+$autoloadPathGlob = __DIR__ . '/../../../autoload.php';
+$autoloadPathLocal = __DIR__ . '/../vendor/autoload.php';
+
+if (file_exists($autoloadPathGlob)) {
+		require_once $autoloadPathGlob;
+} else {
+		require_once $autoloadPathLocal;
+}
 
 PhpConsoleGames\Engine\run();
